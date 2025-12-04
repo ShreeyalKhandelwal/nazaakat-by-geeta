@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nazaakat by Geeta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fffafc;
+      color: #4a2c2a;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    .brand-line {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 0.5rem;
+      font-family: 'Great Vibes', cursive;
+      flex-wrap: wrap;
+    }
+
+    .brand-line span.nazaakat {
+      font-size: 3.2rem;
+      color: #c2a36c;
+      text-shadow: none;
+    }
+
+    .brand-line span.by {
+      font-size: 1.5rem;
+      margin: 0 0.3rem;
+      color: #b77d90;
+    }
+
+    .brand-line span.geeta {
+      font-size: 3.7rem;
+      color: #b77d90;
+      text-shadow: none;
+    }
+
+    .subheader {
+      font-size: 1rem;
+      color: #b87c7c;
+      margin-bottom: 1rem;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1rem 2rem;
+    }
+
+    .dress {
+      width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff0f3;
+      box-shadow: 0 4px 8px rgba(120, 65, 65, 0.2);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .dress:hover {
+      transform: translateY(-5px);
+    }
+
+    .dress img, .dress video {
+      width: 100%;
+      display: block;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .dress-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #7a3e3e;
+      padding: 0.5rem 0 0.2rem;
+    }
+
+    .dress-size {
+      font-size: 0.75rem;
+      color: #7a3e3e;
+      padding-bottom: 0.4rem;
+    }
+
+    .dress-rent {
+      font-size: 0.8rem;
+      color: #7a3e3e;
+      padding-bottom: 0.6rem;
+    }
+
+    .cta {
+      background-color: #c2a36c;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      font-family: 'Georgia', serif;
+      font-size: 0.9rem;
+    }
+
+    .cta:hover {
+      background-color: #e8c37a;
+    }
+
+    footer {
+      background-color: #fff0f3;
+      text-align: center;
+      padding: 1.5rem 1rem 1rem;
+      font-size: 0.9rem;
+      color: #a35e5e;
+    }
+
+    .footer-brand {
+      font-size: 1rem;
+      margin-top: 0.3rem;
+      font-style: normal;
+      font-family: 'Great Vibes', cursive;
+      color: #c06078;
+    }
+
+    .contact-line {
+      color: #8b6f6f;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .brand-line {
+        flex-direction: column;
+        align-items: center;
+      }
+      .dress {
+        width: 90%;
+      }
+      .gallery {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand-line">
+      <span class="nazaakat">Nazaakat</span>
+      <span class="by">by</span>
+      <span class="geeta">Geeta</span>
+    </div>
+    <p class="subheader">Elegance. Grace. Yours, for a day. 🌸</p>
+  </header>
+
+  <section class="gallery">
+    <div class="dress">
+      <video src="dress1.mp4" autoplay muted loop onclick="this.requestFullscreen()"></video>
+      <img src="Image for web -2.png" alt="Elegant Red Dress">
+      <div class="dress-title">Scarlet Bloom</div>
+      <div class="dress-size">Sizes: L, XL</div>
+      <div class="dress-rent">Rent: ₹799/day</div>
+      <button class="cta" onclick="window.location.href='tel:9329577764'">Call to Rent</button>
+    </div>
+    <div class="dress">
+      <video src="dress2.mp4" autoplay muted loop onclick="this.requestFullscreen()"></video>
+      <img src="Image for web -3 temp.png" alt="Vintage Rose Dress">
+      <div class="dress-title">Blush Whisper</div>
+      <div class="dress-size">Sizes: L, XL</div>
+      <div class="dress-rent">Rent: ₹899/day</div>
+      <button class="cta" onclick="window.location.href='tel:9301363695'">Call to Rent</button>
+    </div>
+    <div class="dress">
+      <video src="teaser.mp4" autoplay muted loop onclick="this.requestFullscreen()"></video>
+      <div class="dress-title">More dresses coming soon...</div>
+      <div class="dress-size">Stay tuned!</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="contact-line">Contact: 9329577764 | 9301363695 | Convenient home delivery available</div>
+    <div class="footer-brand">With love by Geeta & Co. ❤️</div>
+  </footer>
+</body>
+
+</html>
