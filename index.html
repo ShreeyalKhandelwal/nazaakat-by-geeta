@@ -161,6 +161,80 @@
     </div>
     <p class="subheader">Elegance. Grace. Yours, for a day. 🌸</p>
   </header>
+	
+	<div style="text-align:center; margin-top: -0.5rem; margin-bottom: 1.3rem;">
+  <label for="citySelect" style="font-family: 'Georgia', serif; font-size: 0.87rem; color:#b87c7c;">
+    Select your city:
+  </label>
+  <select id="citySelect"
+    style="font-family:'Georgia', serif; font-size:0.78rem; color:#7a3e3e; background-color:#fff0f3;
+           border:1px solid #c2a36c; border-radius:6px; padding:0.45rem 0.6rem; width:235px; cursor:pointer;">
+    <option value="" disabled selected>Search / Select city</option>
+    <option value="Indore">Indore</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Bangalore">Bangalore</option>
+    <option value="Kolkata">Kolkata</option>
+    <option value="Pune">Pune</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Ahmedabad">Ahmedabad</option>
+    <option value="Jaipur">Jaipur</option>
+    <option value="Surat">Surat</option>
+    <option value="Lucknow">Lucknow</option>
+    <option value="Bhopal">Bhopal</option>
+    <option value="Nagpur">Nagpur</option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value="Patna">Patna</option>
+    <option value="Goa">Goa</option>
+  </select>
+</div>
+
+<!-- Popup Modal -->
+<div id="cityPopup"
+  style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+         background:rgba(0,0,0,0.45); backdrop-filter: blur(2px); justify-content:center; align-items:center;
+         z-index:1000;">
+  <div style="background:#fffafc; padding:1.5rem 1.7rem; border-radius:12px;
+              max-width:330px; text-align:center; box-shadow:0 4px 10px rgba(120,65,65,0.28);">
+
+    <!-- first line slightly bigger -->
+    <div style="font-size:1.15rem; color:#7a3e3e; font-family:'Georgia', serif; margin-bottom:0.5rem;">
+      We’re coming to your city superrr soon! 💫
+    </div>
+
+    <!-- second line (same vibe) -->
+    <div style="font-size:0.92rem; font-family:'Georgia', serif; color:#4a2c2a; margin-bottom:0.3rem;">
+      Tda! ✨
+    </div>
+
+    <!-- question in italics -->
+    <div style="font-size:0.93rem; font-family:'Georgia', serif; color:#4a2c2a; margin-bottom:0.5rem; font-style:italic;">
+      Want to earn by listing your stunning dresses with us?
+    </div>
+
+    <!-- contact info -->
+    <div style="font-size:0.83rem; color:#7a3e3e; font-family:'Georgia', serif;">
+      WhatsApp/Call: <b>9329577764 🌸</b>
+    </div>
+
+    <button onclick="document.getElementById('cityPopup').style.display='none'"
+      style="margin-top:0.9rem; background-color:#c2a36c; color:white; border:none; border-radius:18px;
+             padding:0.45rem 1.2rem; cursor:pointer; font-family:'Georgia', serif; font-size:0.85rem;">
+      Close
+    </button>
+  </div>
+</div>
+
+
+<script>
+  document.getElementById("citySelect").addEventListener("change", function () {
+    if (this.value === "Indore") return;
+    document.getElementById("cityPopup").style.display = "flex";
+    this.value = ""; // resets dropdown
+  });
+</script>
+
 
   <section class="gallery">
     <div class="dress">
