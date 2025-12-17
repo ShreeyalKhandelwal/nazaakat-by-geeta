@@ -149,6 +149,30 @@
         padding: 1rem;
       }
     }
+.media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4; /* same as fashion images */
+  overflow: hidden;
+  background: #fff0f3;
+}
+
+.media img,
+.media video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media video {
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
   </style>
 </head>
 
@@ -161,7 +185,7 @@
     </div>
     <p class="subheader">Elegance. Grace. Yours, for a day. 🌸</p>
   </header>
-	 
+	
 	<div style="text-align:center; margin-top: 0.6rem; margin-bottom: 1.3rem;">
   <label for="citySelect" style="font-family: 'Georgia', serif; font-size: 0.87rem; color:#b87c7c;">
     Select your city:
@@ -238,17 +262,31 @@
 
   <section class="gallery">
     <div class="dress">
-      <video src="dress1.mp4" autoplay muted loop onclick="this.requestFullscreen()"></video>
-      <img src="Image for web -2.png" alt="Elegant Red Dress">
+      <div class="media">
+      <img src="Image for web -2.png" alt="Scarlet Red Dress">
+      <video src="dress1.mp4" muted loop playsinline preload="metadata"></video>
+      </div>
       <div class="dress-title">Scarlet Bloom</div>
       <div class="dress-size">Sizes: L, XL</div>
       <div class="dress-rent">Rent: ₹799/day</div>
       <button class="cta" onclick="window.location.href='tel:9329577764'">Rent the Look</button>
     </div>
     <div class="dress">
-      <video src="dress2.mp4" autoplay muted loop onclick="this.requestFullscreen()"></video>
-      <img src="Image for web - 4.png" alt="Vintage Rose Dress">
+      <div class="media">
+      <img src="Image for web - 4.png" alt="Lavender Blush Whisper">
+      <video src="blush whisper.mp4" muted loop playsinline preload="metadata"></video>
+      </div>
       <div class="dress-title">Blush Whisper</div>
+      <div class="dress-size">Sizes: L, XL</div>
+      <div class="dress-rent">Rent: ₹899/day</div>
+      <button class="cta" onclick="window.location.href='tel:9301363695'">Rent the Look</button>
+    </div>
+    <div class="dress">
+     <div class="media">
+	  <img src="Image for web - 5.png" alt="Sunshine">
+	  <video src="golden sunshine.mp4" muted loop playsinline preload="metadata"></video>
+	</div>
+	<div class="dress-title">Golden Sunshine </div>
       <div class="dress-size">Sizes: L, XL</div>
       <div class="dress-rent">Rent: ₹899/day</div>
       <button class="cta" onclick="window.location.href='tel:9301363695'">Rent the Look</button>
@@ -259,6 +297,24 @@
       <div class="dress-size">Stay tuned!</div>
     </div>
   </section>
+<script>
+  document.querySelectorAll('.media').forEach(media => {
+    const video = media.querySelector('video');
+
+    media.addEventListener('click', () => {
+      if (video.paused) {
+        video.style.opacity = 1;
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+        video.currentTime = 0;
+        video.style.opacity = 0;
+      }
+    });
+  });
+</script>
+
 
   <footer>
     <div class="contact-line">Contact: 9329577764 | 9301363695 | Convenient home delivery available</div>
